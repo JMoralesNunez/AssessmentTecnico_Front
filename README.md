@@ -1,38 +1,62 @@
-# CoursePlatform
+# Course Platform Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, responsive frontend for a course management platform built with **Vue.js 3**, **Tailwind CSS**, and **Pinia**.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 🔐 Authentication
+- **Secure Login & Register**: Integrated with JWT authentication.
+- **Token Management**: Automatic handling of `accessToken` and `refreshToken` using cookies and Axios interceptors.
+- **Protected Routes**: Navigation guards to prevent unauthorized access to the dashboard.
+- **Persistent Sessions**: Seamless token refresh logic to keep users logged in.
 
-## Recommended Browser Setup
+### 📚 Course Management
+- **CRUD Operations**: Create, Read, Update, and Soft-Delete courses.
+- **Enhanced Listing**: Course filtering by title and status (Draft/Published) and full pagination.
+- **Publishing Safeguards**: Prevents publishing courses without assigned lessons.
+- **Visual Feedback**: Modern "glassmorphism" cards with real-time status updates.
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### 📝 Lesson Management
+- **Detailed Content**: Manage lessons for each specific course.
+- **Smart Reordering**: Intuitively move lessons up or down with instant backend synchronization.
+- **Validation**: Prevents duplicate lesson orders to maintain consistency.
 
-## Customize configuration
+## 🛠️ Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Core**: [Vue 3](https://vuejs.org/) (Composition API)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Pinia](https://pinia.vuejs.org/)
+- **Routing**: [Vue Router](https://router.vuejs.org/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Utility**: `js-cookie` for secure token storage.
 
-## Project Setup
+## 📦 Getting Started
 
-```sh
-npm install
-```
+### Prerequisites
+- Node.js (v20+ recommended)
+- Backend API running at `http://localhost:5028`
 
-### Compile and Hot-Reload for Development
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/JMoralesNunez/AssessmentTecnico_Front.git
+   cd AssessmentTecnico_Front
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
 
-```sh
-npm run dev
-```
+## 🏗️ Architecture
 
-### Compile and Minify for Production
+- **`src/api/axios.js`**: Centralized API configuration with global error handling and token refresh interceptors.
+- **`src/stores/`**: Pinia stores for decoupled state management (`auth`, `courses`, `lessons`).
+- **`src/views/`**: Page-level components for major features.
+- **`src/components/`**: Reusable UI elements (Modals, Pagination, etc.).
 
-```sh
-npm run build
-```
+---
+*Developed for the Technical Assessment - Course Platform Project.*
