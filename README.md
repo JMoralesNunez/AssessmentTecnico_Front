@@ -50,6 +50,19 @@ A modern, responsive frontend for a course management platform built with **Vue.
    npm run dev
    ```
 
+### 🐳 Docker
+Alternatively, you can run the application using Docker:
+
+1. **Build the image**:
+   ```sh
+   docker build -t course-platform-front .
+   ```
+2. **Run the container**:
+   ```sh
+   docker run -d -p 8080:80 course-platform-front
+   ```
+   The app will be available at `http://localhost:8080`.
+
 ## 🏗️ Architecture
 
 - **`src/api/axios.js`**: Centralized API configuration with global error handling and token refresh interceptors.
