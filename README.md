@@ -40,7 +40,6 @@ A modern, responsive frontend for a course management platform built with **Vue.
 1. Clone the repository:
    ```sh
    git clone https://github.com/JMoralesNunez/AssessmentTecnico_Front.git
-   cd AssessmentTecnico_Front
    ```
 2. Install dependencies:
    ```sh
