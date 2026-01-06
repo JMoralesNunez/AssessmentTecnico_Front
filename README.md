@@ -71,4 +71,3 @@ Alternatively, you can run the application using Docker:
 - **`src/components/`**: Reusable UI elements (Modals, Pagination, etc.).
 
 ---
-*Developed for the Technical Assessment - Course Platform Project.*
